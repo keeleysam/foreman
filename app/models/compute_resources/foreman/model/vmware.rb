@@ -270,6 +270,16 @@ module Foreman::Model
         'vmx-04' => '4 (ESX/ESXi 3.5)',
       }
     end
+    
+    # vSphere API boot firmwares - default is BIOS for most operating systems but is changeable.
+    # see http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.wssdk.apiref.doc%2Fvim.vm.GuestOsDescriptor.FirmwareType.html
+    def vm_boot_firmware
+      {
+        'Default' => _("Default"),
+        'bios' => 'BIOS firmware',
+        'efi' => 'Extensible Firmware Interface',
+      }
+    end
 
     def test_connection(options = {})
       super
