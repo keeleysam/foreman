@@ -104,6 +104,7 @@ module Foreman::Model
     def nictypes
       {
         "VirtualE1000" => "E1000",
+        "VirtualE1000e" => "E1000e",
         "VirtualVmxnet3" => "VMXNET 3"
       }
     end
